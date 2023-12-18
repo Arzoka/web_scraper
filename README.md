@@ -6,6 +6,8 @@
 - BeautifulSoup
 - Selenium
 - Geckodriver
+- Colorama
+- Requests
 
 ## Description
 

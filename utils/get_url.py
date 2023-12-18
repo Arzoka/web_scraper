@@ -1,12 +1,13 @@
 import sys
+from colorama import Fore
 
 
 def geturlfrominput(driver):
 
-    urltoscrape = input("Enter the URL to scrape: ")
+    urltoscrape = input(Fore.RESET + "Enter the URL to scrape: ")
 
     if urltoscrape.lower() in ["quit", "exit", "q", "e"]:
-        print("Exiting...")
+        print(Fore.RED + "Exiting...")
         driver.quit()
         sys.exit(0)
 
