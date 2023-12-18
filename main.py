@@ -1,6 +1,7 @@
 from utils.raw_web_scraper import web_scraper
 from utils.load_driver import driver
 from utils.get_url import geturlfrominput
+from utils.remove_duplicates import remove_duplicates
 import os
 from colorama import Fore
 
@@ -23,7 +24,7 @@ else:
 while True:
     url_to_scrape = geturlfrominput(driver)
 
-    result = web_scraper(url_to_scrape, includedElements, driver, test=test)
+    result = remove_duplicates(web_scraper(url_to_scrape, includedElements, driver, test=test))
 
     for key, value in result.items():
         print(f"{key}: {value}")

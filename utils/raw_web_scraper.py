@@ -44,4 +44,5 @@ def web_scraper(url, includedelements, driver, test=False):
     print(Fore.GREEN + f"Execution Time: {execution_time} seconds")
 
     print(Fore.RESET)
+
     return startobject
