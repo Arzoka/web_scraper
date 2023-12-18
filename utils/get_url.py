@@ -10,6 +10,19 @@ def geturlfrominput(driver):
         print(Fore.RED + "Exiting...")
         driver.quit()
         sys.exit(0)
+    elif urltoscrape.lower() in ["multi", "m"]:
+        print(Fore.YELLOW + "Multi URL mode enabled enter 'done' to finish")
+        print(Fore.RESET)
+        urls = []
+        while True:
+            url = input("Enter URL: ")
+            if url.lower() in ["done", "d"]:
+                break
+            else:
+                if not url.startswith(("http", "https")):
+                    url = "https://" + url
+                urls.append(url)
+        return urls
 
     # check if the url is valid
     if not urltoscrape.startswith(("http", "https")):

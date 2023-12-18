@@ -8,6 +8,7 @@
 - Geckodriver
 - Colorama
 - Requests
+- Threading
 
 ## Description
 
